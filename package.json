@@ -7,5 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Samuel Silva",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-util": "latest",
+    "gulp-sass": "latest",
+    "gulp-uglify": "latest",
+    "gulp-concat": "latest",
+    "gulp-connect": "latest"
+    }
 }
