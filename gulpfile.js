@@ -4,9 +4,9 @@ const
     sass    = require('gulp-sass'),
     uglify  = require('gulp-uglify'),
     concat  = require('gulp-concat'),
-    connect = require('gulp-connect'),
     pump    = require('pump'),
-    babel   = require('gulp-babel');
+    babel   = require('gulp-babel'),
+    browserSync = require('browser-sync').create();
 
 gulp.task('log', () => {
     gutil.log('== My Log Task ==')
@@ -17,6 +17,7 @@ gulp.task('sass', () => {
         .pipe(sass({style: 'expanded'}))
             .on('error', gutil.log)
         .pipe(gulp.dest('assets'))
+        .pipe(browserSync.stream())
 });
 
 gulp.task('js', cb => {
@@ -33,14 +34,19 @@ gulp.task('js', cb => {
     );
 });
 
-gulp.task('watch', () => {
-    gulp.watch('js/*.js', ['js']);
-    gulp.watch('scss/style.scss', ['sass']);
+gulp.task('js-watch', ['js'], done => {
+    browserSync.reload();
+    done();
 });
 
-gulp.task('connect', () => {
-    connect.server({
-        root: '.',
-        livereload: true
-    })
+gulp.task('serve', ['sass', 'js'], () => {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+    
+    gulp.watch('js/*.js', ['js-watch']);
+    gulp.watch('scss/style.scss', ['sass']);
+    gulp.watch("*.html").on('change', browserSync.reload);
 });
