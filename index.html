@@ -3,11 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" href="css/style.css">
-    <script defer src="js/acessos.js"></script>
-    <script defer src="js/handlerEvents.js"></script>
+    <link rel="stylesheet" href="assets/style.css">
+    
+    <script defer src="js/models/SearchImage.js"></script>
+
+    <script defer src="assets/script.js"></script>
 </head>
 <body>
+    <section>
+        <form id="frmSearchAdress" >
+            <label for="txtAdress">Adress</label>
+            <input id="txtAdress" type="text">
 
+            <label for="txtCity">City:</label>
+            <input id="txtCity" type="text">
+
+            <button>Search</button>
+        </form>
+    </section>  
+    <img id="img" src="" alt="">
 </body>
 </html>
