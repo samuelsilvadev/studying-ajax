@@ -9,11 +9,16 @@
   "author": "Samuel Silva",
   "license": "ISC",
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
     "gulp": "latest",
-    "gulp-util": "latest",
+    "gulp-babel": "^7.0.0",
+    "gulp-concat": "latest",
+    "gulp-connect": "latest",
     "gulp-sass": "latest",
     "gulp-uglify": "latest",
-    "gulp-concat": "latest",
-    "gulp-connect": "latest"
-    }
+    "gulp-util": "latest",
+    "pump": "^1.0.2"
+  }
 }
