@@ -15,4 +15,11 @@ document.querySelector('#frmSearchAdress')
 	console.log(searchImage.city.value);
 	console.log(keys.streeView.url());
 	document.querySelector('img').src = keys.streeView.url(searchImage.adress.value, searchImage.city.value);
-})
+});
+
+(function agendaTask(){
+	setTimeout(() => {
+			
+	}, 5000);
+});
+
