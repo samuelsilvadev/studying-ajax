@@ -10,7 +10,7 @@ const keys = {
 	newYorkTimes : {
 		API_KEY : "5af775806b0947b0b794a71a41125749",
 		url 	: function(){
-			return ``;
+			return `https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=${this.API_KEY}`;
 		}
 	}
 }
