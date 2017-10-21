@@ -17,16 +17,6 @@ addEventListener('load', () => {
 
 elements.frmSearchAdress.addEventListener('submit', e => {
 	e.preventDefault();
-	console.log(searchImage.adress.value);
-	console.log(searchImage.city.value);
-	console.log(keys.streeView.url());
 	elements.imgNewCity.src = keys.streeView.url(searchImage.adress.value, searchImage.city.value);
-	getNews();
+	getNews(searchImage.adress.value, searchImage.city.value);
 });
-
-(function agendaTask(){
-	setTimeout(() => {
-	
-	}, 5000);
-});
-
