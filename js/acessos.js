@@ -9,7 +9,7 @@ const keys = {
 	newYorkTimes : {
 		API_KEY : "5af775806b0947b0b794a71a41125749",
 		url 	: function(adress, city){
-			return `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${adress}${city}&sort=newestapi-key=${this.API_KEY}`;		
+			return `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${adress}${city}&sort=newest&api-key=${this.API_KEY}`;		
 		}
 	}
 }
