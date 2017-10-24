@@ -1,8 +1,10 @@
 
 const headers = new Headers({
-    'Content-Type': 'application/json;charset=UTF-8'
+    'Content-Type': 'application/json;charset=UTF-8',
+    'Access-Control-Allow-Credentials': 'true'
 });
-const myInit = { 
+
+const myConfs = { 
                 method: 'GET',
                 headers: headers,
                 mode: 'cors',
@@ -10,7 +12,7 @@ const myInit = {
             };
 
 function getNews(adress, city){
-    get(keys.newYorkTimes.url(adress, city), myInit)
+    get(keys.newYorkTimes.url(adress, city), myConfs)
         .then(response => response.json()
         .then(json => console.log(json)));
 }
