@@ -12,7 +12,7 @@ const myConfs = {
             };
 
 function getNews(adress, city){
-    get(keys.newYorkTimes.url(adress, city), myConfs)
+   return get(keys.newYorkTimes.url(adress, city), myConfs)
         .then(response => response.json()
-        .then(json => console.log(json)));
+            .then(json => json));
 }
