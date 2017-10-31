@@ -23,9 +23,7 @@ elements.frmSearchAdress.addEventListener('submit', e => {
 });
 
 function buildArticles(articles){
-	console.log(articles.response.docs);
-	let finalContentHTML = '';
-
+	
 	const everyArticles = articles.response.docs.map(element => {
 		
 		return`	<div class="col s4 m4">
@@ -35,7 +33,7 @@ function buildArticles(articles){
 								<p>${element.snippet}</p>
 						</div>
 						<div class="card-action">
-							<a href="${element.web_url}">Url</a>									
+							<a target="_blank" href="${element.web_url}">Url</a>									
 						</div>
 					</div>
 				</div>`;		
