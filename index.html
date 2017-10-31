@@ -2,16 +2,17 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Search a new place for you</title>
+    
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css">
     
     <script defer src="js/models/SearchImage.js"></script>
-
     <script defer src="assets/script.js"></script>
 </head>
 <body>
     <div class="container">
+    <div class="card-panel hoverable">
     <section class="form__container section">
         <h5>Busque seu novo endereço</h5>
         <form id="frmSearchAdress" class="col s12 form__container--main">
@@ -20,19 +21,22 @@
                 <label for="txtAdress">Adress</label>
                 <input id="txtAdress" type="text">
             </div>
-            <div class="input-field col s5">
+            <div class="input-field col s4">
                 <label for="txtCity">City:</label>
                 <input id="txtCity" type="text">
             </div>
-            <div class="col s2">
-                <button class="btn waves-effect waves-light" type="submit" name="action">Pesquisar</button>
+            <div class="col s3">
+                <button class="btn waves-effect waves-light btn" type="submit" name="action">Pesquisar</button>
             </div>
             </div>
         </form>
     </section>
+    </div>
     <div class="divider"></div>
     <section class="articles__container section">
-        <h5>News do seu seu novo endereço</h5>
+        <div class="card-panel">
+            <h5>News do seu seu novo endereço</h5>
+        </div>
         <div class="articles__itens row"></div>
     </section>
     <img id="img" class="image__background" src="" alt="">
