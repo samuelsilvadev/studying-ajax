@@ -6,26 +6,28 @@
     
     <title>Search a new place for you</title>
     
-    <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/style.css">
     
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script defer src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
     <script defer src="js/models/SearchImage.js"></script>
     <script defer src="assets/script.js"></script>
 </head>
 <body>
     <div class="container">
     <div class="card-panel hoverable">
-    <section class="form__container section">
-        <h5>Busque seu novo endereço</h5>
+    <section class="form__container section row div--nomarginbotton">
+        <h5 class="h5--lessweight">Busque seu novo endereço</h5>
         <form id="frmSearchAdress" class="col s12 form__container--main">
-            <div class="row">
+            <div class="row div--nomarginbotton">
             <div class="input-field col s5">
-                <label for="txtAdress">Adress</label>
                 <input id="txtAdress" type="text">
+                <label for="txtAdress">Adress</label>
             </div>
             <div class="input-field col s4">
-                <label for="txtCity">City:</label>
                 <input id="txtCity" type="text">
+                <label for="txtCity">City:</label>
             </div>
             <div class="col s3">
                 <button class="btn waves-effect waves-light btn" type="submit" name="action">Pesquisar</button>
@@ -37,7 +39,7 @@
     <div class="divider"></div>
     <section class="articles__container section">
         <div class="card-panel">
-            <h5>News do seu seu novo endereço</h5>
+            <h5 class="h5--lessweight">News do seu seu novo endereço</h5>
         </div>
         <div class="articles__itens row"></div>
     </section>

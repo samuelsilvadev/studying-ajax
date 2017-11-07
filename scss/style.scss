@@ -2,11 +2,11 @@
     margin: 0;
     //outline: 1px solid rebeccapurple;
     box-sizing:border-box;
-    overflow: hidden;
     
 }
 
 body{
+    overflow: hidden;
     height: 100vh;
 }
 
@@ -24,12 +24,19 @@ body{
     
     &--main{
         padding: 1em;
-        
-        
+        height: 14vh;
     }
 }
 
 .articles__itens{
     height: 300px;
     overflow: auto;
+}
+
+.div--nomarginbotton{
+    margin-bottom:0;
+}
+
+.h5--lessweight{
+    font-weight: 300;
 }
