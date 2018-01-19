@@ -16,7 +16,7 @@ Project used to test new features of JS, and training my skills with js/ajax
 
 ### License
 
-[Mit license]()
+[Mit license](https://github.com/samuelsilvadev/studying-ajax/blob/master/LICENSE.md)
 
 
 
